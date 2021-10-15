@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="static/user.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+    <ul>
+        <li>База пользователей</li>
+        <li> <a href="/">Все пользователи</a></li>
+        <li><a href="search.html">Поиск</a></li>
+        <li><a href="add_user.html">Добавить</a></li>
+    </ul>
+    </nav>
+    {% for u in users%}
+    <div> <h1 class="main_users">{{ u.name }}</h1>, {{ u.age }}
+        {% if u.is_blocked %} заблокирован, разблокируется {{ u.unblock_date }} {% endif %}
+    </div>
+    {% endfor %}
+</body>
+</html>
