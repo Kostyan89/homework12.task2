@@ -34,7 +34,7 @@ def add_user():
         """new_user = {
             "name": data.get("name"),
             "age": data.get("age"),
-            "is_blocked": data.get("is_blocked"),
+            "is_blocked":  data.get("is_blocked"),
             "unblock_date": data.get("unblock_date")
         }"""
 
